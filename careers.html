@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="x, y, ,etc" />
+  <meta name="description" content="x, y, ,etc" />
+  <meta name="author" content="x, y, ,etc" />
+  <title>The North Face</title>
+  <link rel="icon" href="Assets/images/Logo.png" class="icon" />
+  <link rel="stylesheet" href="Assets/bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="Assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-xxl navbar-light bg-light fs-5 fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img class="logo-img img-fluid" src="Assets/images/Logo.png" alt="Chtaura Logo" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dairy.html">Dairy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pastries.html">Pastries</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="careers.html">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">Contact Us</a>
+          </li>
+        </ul>
+        <li class="nav-item">
+          <button class="btn btn-outline-primary m-2">
+            <a class="nav-link" href="myaccount.html">My Account</a>
+          </button>
+        </li>
+        <li class="shoppingicon nav-item">
+          <i class="bx bx bx-shopping-bag fs-3" id="cart-bag"></i>
+          <span id="total-items-display" class="cart-number fs-3">0</span>
+        </li>
+        <div class="cart">
+          <h2 class="cart-title">Your Cart</h2>
+          <div class="cart-content"></div>
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">0$</div>
+          </div>
+          <button type="button" class="btn btn-buy btn-primary">
+            <a href="checkout.html" class="btn">Buy Now</a>
+          </button>
+          <i class="bx bx-x" id="close-cart"></i>
+        </div>
+      </div>
+    </div>
+</nav>
+
+  <section class="px-5 pb-5" style="padding-top: 200px;">
+    <div class="container careers-form">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <img src="Assets/images/careers.png" alt="avatar" class="img-fluid">
+        </div>
+        <div class="col-md-6 col-sm-12 mt-5 ">
+          <h3 class="text-center title" data-lan="careers">Careers</h3>
+          <p class="text-center" data-lan="jointeam">Join our team.</p>
+          <form>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="name" class="form-label" data-lan="namelabel">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Mohamed Salah" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="birthdate" class="form-label" data-lan="datelabel">Birth Date</label>
+                <input type="date" class="form-control" id="birthdate">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label" data-lan="maillabel">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="mosalah11@icloud.com">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="job" class="form-label" data-lan="jobtype">Job</label>
+                <select class="form-control" id="job">
+                  <option value="">Sales</option>
+                  <option value="">Backoffice</option>
+                  <option value="">Quality</option>
+                </select>
+              </div>
+              <div class="col-md-12 mb-3">
+                <label for="cv" class="form-label" data-lan="resumeatt">CV</label>
+                <input type="file" class="form-control" id="cv">
+              </div>
+              <div class="col-md-12 mb-3">
+                <label for="message" class="form-label" data-lan="proposal">Message</label>
+                <textarea class="form-control" id="message"></textarea>
+              </div>
+              <div class="col-md-12 mb-3">
+                <div class="buttons text-center">
+                  <button class="btn btn-primary" data-lan="applynow">
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-muted">
+      <!-- Section: Social media -->
+      <section class="d-flex justify-content-center p-4 border-bottom border-top">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+  
+        <!-- Right -->
+        <div>
+          <a href="" class="me-4 text-reset" style="text-decoration: none">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-google"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+  
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">Chtaura</h6>
+              <p>
+                Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit.
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Products</h6>
+              <p>
+                <a href="dairy.html" class="text-reset">Dairy</a>
+              </p>
+              <p>
+                <a href="pastries.html" class="text-reset">Pastries</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Explore</h6>
+              <p>
+                <a href="aboutus.html#blog" class="text-reset">Blog</a>
+              </p>
+              <p>
+                <a href="aboutus.html#events" class="text-reset">Events</a>
+              </p>
+              <p>
+                <a href="aboutus.html#community" class="text-reset">Community</a>
+              </p>
+              <p>
+                <a href="aboutus.html#our-story" class="text-reset">Our Story</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p>
+                <i class="bi bi-geo-alt-fill me-3"></i>123 Adventure Way,
+                Mountain Town
+              </p>
+              <p>
+                <i class="bi bi-envelope me-3"></i>
+                info@thenorthface.com
+              </p>
+              <p><i class="bi bi-phone me-3"></i> +1 800 123 4567</p>
+              <p><i class="bi bi-telephone me-3"></i> +1 800 987 6543</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+  
+      <!-- Copyright -->
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05)">
+        © 2024 Chtaura. All rights reserved.
+        <a class="text-reset fw-bold" href="index.html">Explore More on Chtaura</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+  <!-- Script -->
+  <script src="Assets/bootstrap/js/popper.min.js"></script>
+  <script src="Assets/bootstrap/js/jquery-3.7.1.min.js"></script>
+  <script src="Assets/bootstrap/js/bootstrap.js"></script>
+  <script src="Assets/js/script.js"></script>
+</body>
+
+</html>

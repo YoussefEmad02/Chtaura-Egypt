@@ -1,0 +1,664 @@
+/* Set the default font for all elements to 'Roboto' and sans-serif */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Set the background color for the entire body */
+body {
+    background: #f1fbff;
+}
+
+/* Hide the scrollbar in webkit browsers */
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+/* ---------------------------- Navigation Bar ---------------------------- */
+
+/* Remove text decoration from anchor elements */
+a {
+    text-decoration: none;
+}
+
+/* Styles for the navbar */
+.navbar {
+    background: linear-gradient(rgb(131, 197, 241), white); /* Apply a linear gradient background that transitions from the specified blue to transparent white */
+}
+
+
+/* Add padding to navigation items */
+.nav-item {
+    padding-left: 10px;
+}
+
+/* Remove list-style and set cursor for better navigation styling */
+.navbar li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+/* Set maximum width for the logo image */
+.logo-img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Style for the dropdown menu */
+.dropdown-menu {
+    background: linear-gradient(rgb(131, 197, 241), white);
+}
+
+/* Style for dropdown menu items */
+.dropdown-item {
+    color: black;
+}
+
+/* Style for dropdown menu items on hover */
+.dropdown-item:hover {
+    background-color: black;
+    color: #f1fbff;
+}
+
+/* ---------------------------- Navigation Bar End ---------------------------- */
+
+
+/* ----------------------------------- Cart ----------------------------------- */
+
+/* Style for the cart bag icon on hover, changing text color to blue */
+#cart-bag:hover {
+    color: blue;
+}
+
+/* Styles for the shopping cart container */
+
+.cart {
+    position: fixed; /* Fixed position ensures the cart stays in place even when the user scrolls */
+    top: 0; /* Position the cart at the top of the viewport */
+    right: -100%; /* Initially position the cart off-screen to the right */
+    width: 360px; /* Set a fixed width for the cart */
+    min-height: 100vh; /* Minimum height covering the entire viewport */
+    padding: 20px; /* Add padding to the content inside the cart */
+    box-shadow: -2px 0 4px hsl(0 4% 15% / 10%); /* Apply a subtle box shadow on the left side of the cart */
+    background: linear-gradient(rgb(131, 197, 241), white); /* Use a linear gradient background for a colorful appearance */
+    transition: 0.3s; /* Apply a smooth transition effect for animations */
+    z-index: 5; /* Set a z-index to ensure the cart appears above other elements on the page */
+}
+
+/* Styles for the content within the shopping cart */
+.cart-content {
+    max-height: 450px; /* Set the maximum height for the cart content to provide a scrollable area if it exceeds this height */
+    overflow-y: auto; /* Enable vertical scrolling within the cart content when it exceeds the specified maximum height */
+}
+
+/* Styles for the active state of the shopping cart */
+.cart.active {
+    right: 0; /* When the 'active' class is present on the cart, shift it to the right (0 pixels) to bring it into view */
+}
+
+/* Styles for the title within the shopping cart */
+.cart-title {
+    text-align: center; /* Center-align the text within the cart title */
+    font-size: 1.5rem; /* Set the font size of the cart title to 1.5rem */
+    font-weight: 600; /* Apply a font weight of 600 (semi-bold) to the cart title */
+    margin-top: 2rem; /* Provide a top margin of 2rem to create space above the cart title */
+    border: 3px solid black; /* Add a 1px solid black border around the cart title */
+    border-radius: 25px; /* Apply a border-radius of 25px for rounded corners on the cart title */
+    margin-bottom: 1.5rem; /* Provide a bottom margin of 1.5rem to create space below the cart title */
+}
+
+/* Styles for each box containing an item within the shopping cart */
+.cart-box {
+    display: grid; /* Use a grid layout for flexible item positioning */
+    grid-template-columns: 32% 50% 28%; /* Define three columns with specified percentages of the container width */
+    align-items: center; /* Align items along the vertical axis (centering them vertically) */
+    gap: 1rem; /* Set a 1rem gap between the columns in the grid */
+    margin-top: 1rem; /* Provide a top margin of 1rem to create space between each item box */
+}
+
+
+/* Styles for the image within each item box in the shopping cart */
+.cart-img {
+    width: 100px; /* Set a fixed width of 100px for the item image */
+    height: 100px; /* Set a fixed height of 100px for the item image */
+    object-fit: contain; /* Maintain the aspect ratio of the image while containing it within the specified dimensions */
+    padding: 10px; /* Add padding around the item image */
+}
+
+/* Styles for the container of details within each item box */
+.detail-box {
+    display: grid; /* Use a grid layout for flexible positioning of details */
+    row-gap: 0.5rem; /* Set a vertical gap of 0.5rem between rows in the grid */
+}
+
+/* Styles for the title of each product within the item box */
+.cart-product-title {
+    font-size: 1rem; /* Set the font size of the product title to 1rem */
+    text-transform: uppercase; /* Convert text to uppercase for the product title */
+}
+
+/* Styles for the price of each product within the item box */
+.cart-price {
+    font-weight: 500; /* Apply a font weight of 500 (medium-bold) to the product price */
+}
+
+
+/* Styles for the quantity input within each item box in the shopping cart */
+
+.cart-quantity {
+    border: 2px solid black; /* Add a 2px solid black border to the quantity input */
+    border-radius: 10px; /* Apply a border-radius of 10px for rounded corners */
+    width: 2.4rem; /* Set a fixed width of 2.4rem for the quantity input */
+    text-align: center; /* Center-align the text within the quantity input */
+    font-size: 1rem; /* Set the font size of the quantity input to 1rem */
+    background-color: transparent; /* Set the background color of the quantity input to transparent */
+}
+
+/* Styles for the remove item icon within each item box in the shopping cart */
+
+.cart-remove {
+    font-size: 24px; /* Set the font size of the remove item icon to 24px */
+    cursor: pointer; /* Use a pointer cursor to indicate interactivity (e.g., clicking) */
+}
+
+/* Styles for the remove item icon on hover, changing color to red */
+
+.cart-remove:hover {
+    color: red; /* Change the color of the remove item icon to red when hovered over */
+}
+
+
+/* Styles for the total section at the bottom of the shopping cart */
+
+.total {
+    padding-top: 10px; /* Add top padding of 10px to the total section */
+    display: flex; /* Use a flex container for flexible item positioning */
+    justify-content: flex-end; /* Align items to the flex-end (right) of the container */
+    margin-top: 1.5rem; /* Provide a top margin of 1.5rem to create space above the total section */
+    border-top: 1px solid black; /* Add a 1px solid black border at the top of the total section */
+}
+
+/* Styles for the title in the total section */
+
+.total-title {
+    font-size: 1rem; /* Set the font size of the total title to 1rem */
+    font-weight: 600; /* Apply a font weight of 600 (semi-bold) to the total title */
+}
+
+/* Styles for the total price in the total section */
+
+.total-price {
+    margin-left: 0.5rem; /* Provide a left margin of 0.5rem to create space to the left of the total price */
+}
+
+/* Styles for the buy button */
+.btn-buy {
+    transform: translateX(100px); /* Translate the button horizontally by 100px */
+}
+
+
+/* Styles for the close cart icon */
+#close-cart {
+    position: absolute; /* Set the position to absolute for precise placement */
+    top: 1rem; /* Set the top position to 1rem */
+    right: 0.8rem; /* Set the right position to 0.8rem */
+    font-size: 2rem; /* Set the font size of the close cart icon to 2rem */
+    cursor: pointer; /* Use a pointer cursor to indicate interactivity (e.g., clicking) */
+}
+
+/* Styles for the close cart icon on hover, changing color to red */
+#close-cart:hover {
+    color: blue; /* Change the color of the close cart icon to red when hovered over */
+}
+
+
+/* -------------------------------------- Cart End -------------------------------------- */
+
+/* ------------------------------- Background Video Style ------------------------------- */
+
+/* Styles for the video container */
+.video-container {
+    position: relative; /* Establish relative positioning for child elements */
+    overflow: hidden; /* Hide any content that overflows the container */
+    height: 100vh; /* Set the height of the container to 100% of the viewport height */
+}
+
+/* Styles for the video element */
+video {
+    position: absolute; /* Position the video absolutely within its containing block */
+    top: 50%; /* Align the top edge of the video to the vertical center of the container */
+    left: 50%; /* Align the left edge of the video to the horizontal center of the container */
+    transform: translate(-50%, -50%); /* Center the video precisely using a translation */
+    min-width: 100%; /* Ensure the minimum width of the video is 100% of its container */
+    min-height: 100%; /* Ensure the minimum height of the video is 100% of its container */
+    width: auto; /* Allow the width of the video to adjust based on its aspect ratio */
+    height: auto; /* Allow the height of the video to adjust based on its aspect ratio */
+    z-index: -1; /* Set a z-index of -1 to position the video behind other elements */
+}
+
+/* -------------------- Content Over Video Style -------------------- */
+
+/* Styles for the main header */
+.mainheader {
+    font-size: 160px; /* Set the font size of the main header to 160 pixels */
+    color: black; /* Set the text color of the main header to black */
+    font-weight: 600; /* Apply a font weight of 600 (semi-bold) to the main header */
+    transition: 0.5s; /* Apply a smooth transition effect over 0.5 seconds */
+}
+
+/* Styles for the main header on hover */
+.mainheader:hover {
+    -webkit-text-stroke: 6px white; /* Add a 6px white stroke around the text on hover */
+    color: transparent; /* Make the text color transparent on hover */
+}
+
+/* Styles for the explore button */
+.explorebtn {
+    font-size: 3rem; /* Set the font size of the explore button to 3rem */
+    border: 4px solid; /* Add a 4px solid border to the explore button */
+    padding: 20px; /* Add 20px padding to the explore button */
+    border-radius: 50px; /* Apply a border-radius of 50px for rounded corners */
+    cursor: pointer; /* Use a pointer cursor to indicate interactivity (e.g., clicking) */
+}
+
+/* Styles for the explore button on hover */
+.explorebtn:hover {
+    color: white; /* Change the text color to white on hover */
+    transition: 0.2s; /* Apply a smooth transition effect over 0.2 seconds on hover */
+}
+
+
+/* -------------------- Content Over Video Style End -------------------- */
+
+/* ------------------------------- Background Video Style End ------------------------------- */
+
+/* -------------------------------------- Product Card -------------------------------------- */
+
+/* Styles for the Product Box */
+.productbox {
+    position: relative; /* Set the position to relative for child element positioning */
+    height: 100%; /* Set the height of the product box to 100% of its container */
+    border: 10px solid transparent; /* Add a 10px solid transparent border to the product box */
+}
+
+/* Styles for the Product Box on hover */
+.productbox:hover {
+    padding: 10px; /* Add 10px padding to the product box on hover */
+    border: 1px solid black; /* Change the border to 1px solid black on hover */
+    transition: 0.15s; /* Apply a smooth transition effect over 0.15 seconds on hover */
+}
+
+/* Styles for the Product Image */
+.product-image {
+    width: 100%; /* Set the width of the product image to 100% of its container */
+    height: auto; /* Allow the height of the product image to adjust based on its aspect ratio */
+    margin-bottom: 0.5rem; /* Add a bottom margin of 0.5rem to the product image */
+}
+
+/* Styles for the Product Title */
+.product-title {
+    text-transform: uppercase; /* Convert text to uppercase for the product title */
+}
+
+/* Styles for the Add-to-Cart Button */
+.add-cart {
+    position: absolute; /* Set the position to absolute for precise placement */
+    bottom: 0; /* Align the bottom edge of the add-to-cart button to the bottom of the product box */
+    right: 0; /* Align the right edge of the add-to-cart button to the right of the product box */
+    padding: 10px; /* Add 10px padding to the add-to-cart button */
+    background-color: rgb(131, 197, 241); /* Set the background color of the add-to-cart button */
+    font-size: 1.6em; /* Set the font size of the add-to-cart button to 1.6em */
+    color: white; /* Set the text color of the add-to-cart button to white */
+    cursor: pointer; /* Use a pointer cursor to indicate interactivity (e.g., clicking) */
+}
+
+/* Styles for the Add-to-Cart Button on hover */
+.add-cart:hover {
+    background-color: black; /* Change the background color to black on hover */
+}
+
+/* ------------------------------------- Product Card End ------------------------------------- */
+
+/* -------------------------------------- Conetnt Section -------------------------------------- */
+
+/* Styles for section padding */
+.section-padding {
+    padding: 100px 0; /* Apply 100 pixels of padding on the top and bottom of the section */
+}
+
+/* ------------------------------------ Content Section End ------------------------------------ */
+
+
+/* ------------------------------------------ Carousel ------------------------------------------ */
+
+/* Styles for carousel items */
+.carousel-item {
+    height: 100vh; /* Set the height of each carousel item to 100% of the viewport height */
+    min-height: 100px; /* Set a minimum height of 300 pixels for each carousel item */
+}
+
+/* Styles for carousel captions */
+.carousel-caption {
+    bottom: 320px; /* Set the distance from the bottom of the carousel item for the caption */
+    z-index: 2; /* Set the stacking order of the caption above other elements */
+}
+
+.carousel-caption h5 {
+    font-size: 45px; /* Set the font size of the caption heading to 45 pixels */
+    text-transform: uppercase; /* Convert text to uppercase for the caption heading */
+    letter-spacing: 2px; /* Set the letter spacing for the caption heading */
+    margin-top: 25px; /* Set the top margin for the caption heading */
+}
+
+.carousel-caption p {
+    width: 60%; /* Set the width of the caption paragraph to 60% of its container */
+    margin: auto; /* Center-align the caption paragraph within its container */
+    font-size: 18px; /* Set the font size of the caption paragraph to 18 pixels */
+    line-height: 1.9; /* Set the line height for the caption paragraph */
+}
+
+/* Styles for overlay on carousel inner */
+.carousel-inner::before {
+    content: ''; /* Generate an empty content box before the carousel inner content */
+    position: absolute; /* Set the position to absolute for overlay placement */
+    width: 100%; /* Set the width of the overlay to 100% of its container */
+    height: 80%; /* Set the height of the overlay to 100% of its container */
+    top: 0; /* Align the top edge of the overlay to the top of its container */
+    left: 0; /* Align the left edge of the overlay to the left of its container */
+    background: rgba(0, 0, 0, 0.7); /* Set the background color of the overlay with some transparency */
+    z-index: 1; /* Set the stacking order of the overlay behind the carousel content */
+}
+
+/* Styles for 100% width */
+.w-100 {
+    height: 80vh; /* Set the height of elements with the 'w-100' class to 80% of the viewport height */
+}
+
+/* ------------------------------------------ Carousel End ------------------------------------------ */
+
+
+/* --------------------------------------------- Footer --------------------------------------------- */
+
+/* Styles for the footer background using a linear gradient */
+footer {
+    background: linear-gradient(#f1fbff, rgb(131, 197, 241));
+}
+
+/* ------------------------------------------- Footer End ------------------------------------------- */
+
+/* ----------------------------------------- Products Pages ----------------------------------------- */
+
+/* Styles for Products Pages Headings */
+.headings {
+    text-align: center; /* Center-align the text within headings */
+    font-weight: 600; /* Apply a font weight of 600 (semi-bold) to headings */
+    margin-top: 5%; /* Provide a top margin of 5% to create space above headings */
+    margin-bottom: 5%; /* Provide a bottom margin of 5% to create space below headings */
+}
+
+/* --------------------------------------- Products Pages End --------------------------------------- */
+
+/* ----------------------------------------- My Account Page ----------------------------------------- */
+
+/* Styles for the wrapper */
+.wrapper {
+    position: relative; /* Set the position to relative for child element positioning */
+    width: 400px; /* Set the width of the wrapper to 400 pixels */
+    height: 440px; /* Set the height of the wrapper to 440 pixels */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Add a 2px solid border with partial transparency */
+    border-radius: 20px; /* Apply a border-radius of 20px for rounded corners */
+    backdrop-filter: blur(20px); /* Apply a blur filter to the wrapper background */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Add a box shadow with partial transparency */
+    display: flex; /* Use a flex container for flexible item positioning */
+    justify-content: center; /* Center-align items horizontally within the wrapper */
+    align-items: center; /* Center-align items vertically within the wrapper */
+    overflow: hidden; /* Hide any content that overflows the wrapper */
+    transition: height 0.2s ease; /* Apply a smooth transition effect to the height over 0.2 seconds */
+    background: linear-gradient(rgba(255, 255, 255, 0), rgb(131, 197, 241), rgba(255, 255, 255, 0)); /* Apply a linear gradient background */
+}
+
+/* Styles for the active state of the wrapper */
+.wrapper.active {
+    height: 520px; /* Set the height of the wrapper to 520 pixels in the active state */
+}
+
+/* Styles for the form boxes within the wrapper */
+.wrapper .form-box {
+    width: 100%; /* Set the width of the form box to 100% */
+    padding: 40px; /* Add 40px padding to the form box */
+}
+
+/* Styles for the login form box */
+.wrapper .form-box.login {
+    transition: transform 0.18s ease; /* Apply a smooth transition effect to the transform property */
+    transform: translateX(0); /* Reset the horizontal translation of the login form box */
+}
+
+/* Styles for the active state of the login form box */
+.wrapper.active .form-box.login {
+    transition: none; /* Disable the transition during the active state */
+    transform: translateX(-400px); /* Move the login form box to the left by 400px in the active state */
+}
+
+/* Styles for the register form box */
+.wrapper .form-box.register {
+    position: absolute; /* Set the position to absolute for precise placement */
+    transition: none; /* Disable the transition for the register form box */
+    transform: translateX(400px); /* Move the register form box to the right by 400px */
+}
+
+/* Styles for the active state of the register form box */
+.wrapper.active .form-box.register {
+    transition: transform 0.18s ease; /* Apply a smooth transition effect to the transform property */
+    transform: translateX(0); /* Reset the horizontal translation of the register form box in the active state */
+}
+
+/* Styles for the heading within the form box */
+.wrapper .form-box h2 {
+    font-size: 2em; /* Set the font size of the heading to 2em */
+    color: #162938; /* Set the text color of the heading */
+    text-align: center; /* Center-align the text within the heading */
+}
+
+/* Styles for the input boxes within the form box */
+.wrapper .form-box .input-box {
+    position: relative; /* Set the position to relative for child element positioning */
+    width: 100%; /* Set the width of the input box to 100% */
+    height: 50px; /* Set the height of the input box to 50 pixels */
+    border-bottom: 2px solid #162938; /* Add a 2px solid border at the bottom of the input box */
+    margin: 30px 0; /* Add top and bottom margin of 30px */
+}
+
+/* Styles for the labels within the input boxes */
+.wrapper .form-box .input-box label {
+    position: absolute; /* Set the position to absolute for precise placement */
+    top: 50%; /* Align the top edge of the label to the vertical center of the input box */
+    left: 5px; /* Set the left offset of the label to 5px */
+    transform: translateY(-50%); /* Center-align the label vertically using translateY */
+    font-size: 1em; /* Set the font size of the label to 1em */
+    color: #162938; /* Set the text color of the label */
+    font-weight: 500; /* Apply a font weight of 500 to the label */
+    pointer-events: none; /* Disable pointer events on the label to allow interaction with the input */
+    transition: 0.5s; /* Apply a smooth transition effect over 0.5 seconds */
+}
+
+/* Styles for the labels when the input is focused or has content */
+.wrapper .form-box .input-box input:focus~label,
+.wrapper .form-box .input-box input:valid~label {
+    top: -5px; /* Move the label upward when the input is focused or has content */
+}
+
+/* Styles for the input fields within the input boxes */
+.wrapper .form-box .input-box input {
+    width: 100%; /* Set the width of the input field to 100% of the input box */
+    height: 100%; /* Set the height of the input field to 100% of the input box */
+    background: transparent; /* Set the background of the input field to transparent */
+    border: none; /* Remove the border from the input field */
+    outline: none; /* Remove the outline from the input field */
+    font-size: 1em; /* Set the font size of the input field to 1em */
+    color: #162938; /* Set the text color of the input field */
+    font-weight: 600; /* Apply a font weight of 600 to the input field */
+    padding: 0 35px 0 5px; /* Add padding to the input field */
+}
+
+/* Styles for the icons within the input boxes */
+.wrapper .form-box .input-box .icon {
+    position: absolute; /* Set the position to absolute for precise placement */
+    right: 8px; /* Set the right offset of the icon to 8px */
+    font-size: 1.2em; /* Set the font size of the icon to 1.2em */
+    color: #162938; /* Set the color of the icon */
+    line-height: 57px; /* Set the line height of the icon to vertically center it */
+}
+
+
+/* Styles for the remember-forgot section */
+.remember-forgot {
+    font-size: 0.9em; /* Set the font size of the remember-forgot section to 0.9em */
+    color: #162938; /* Set the text color to #162938 */
+    font-weight: 500; /* Apply a font weight of 500 to the text */
+    margin: -15px 0 15px; /* Adjust the top and bottom margin */
+    display: flex; /* Use a flex container for flexible item positioning */
+    justify-content: space-between; /* Spread items evenly along the horizontal axis */
+}
+
+.remember-forgot label input {
+    accent-color: #162938; /* Set the accent color of the input field */
+    margin-right: 3px; /* Add a right margin to the input field */
+}
+
+.remember-forgot a {
+    color: #162938; /* Set the text color of the anchor tag */
+    text-decoration: none; /* Remove the default text decoration */
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline; /* Underline the anchor text on hover */
+}
+
+/* Styles for the buttons within the form box */
+.wrapper .form-box .btn {
+    width: 100%; /* Set the width of the button to 100% */
+    height: 45px; /* Set the height of the button to 45 pixels */
+    background: #162938; /* Set the background color of the button to #162938 */
+    border: none; /* Remove the border from the button */
+    outline: none; /* Remove the outline from the button */
+    border-radius: 6px; /* Apply a border-radius of 6px for rounded corners */
+    cursor: pointer; /* Use a pointer cursor to indicate interactivity */
+    font-size: 1em; /* Set the font size of the button to 1em */
+    color: #fff; /* Set the text color of the button to white */
+    font-weight: 500; /* Apply a font weight of 500 to the text */
+    transition: 0.5s; /* Apply a smooth transition effect over 0.5 seconds */
+}
+
+/* Styles for the login-register section */
+.wrapper .form-box .login-register {
+    font-size: 0.9em; /* Set the font size of the login-register section to 0.9em */
+    color: #162938; /* Set the text color to #162938 */
+    text-align: center; /* Center-align the text within the login-register section */
+    font-weight: 500; /* Apply a font weight of 500 to the text */
+    margin-top: 25px; /* Set the top margin of the login-register section */
+}
+
+/* Styles for the anchor tag within the login-register section */
+.wrapper .form-box .login-register p a {
+    color: #162938; /* Set the text color of the anchor tag */
+    text-decoration: none; /* Remove the default text decoration */
+    font-weight: 600; /* Apply a font weight of 600 to the text */
+}
+
+.wrapper .form-box .login-register p a:hover {
+    text-decoration: underline; /* Underline the anchor text on hover */
+}
+
+
+/* --------------------------------------- My Account Page End --------------------------------------- */
+
+
+/* ------------------------------------------- Careers Page ------------------------------------------- */
+
+/* Styles for the careers-form */
+.careers-form {
+    background: linear-gradient(rgba(255, 255, 255, 0), rgb(131, 197, 241), rgba(255, 255, 255, 0));
+    /* Apply a linear gradient background with transparency */
+    border-radius: 50px; /* Apply a border-radius of 50px for rounded corners */
+}
+
+/* ----------------------------------------- Careers Page End ----------------------------------------- */
+
+
+/* ------------------------------------------- Contact Us Page ------------------------------------------- */
+
+
+/* Styles for the left-div */
+.left-div {
+    height: 100%; /* Set the height of the left-div to 100% */
+    background-color: rgb(0, 183, 255); /* Set the background color to a shade of blue */
+    border-radius: 10px; /* Apply a border-radius of 10px for rounded corners */
+    position: relative; /* Set the position to relative for absolute positioning of pseudo-elements */
+    overflow: hidden; /* Hide any content that overflows the left-div */
+    padding: 50px; /* Add 50px padding to the left-div */
+    display: flex; /* Use a flex container for flexible item positioning */
+    flex-direction: column; /* Arrange items in a column direction */
+}
+
+/* Styles for the pseudo-element ::before */
+.left-div::before {
+    display: block; /* Render the pseudo-element as a block-level element */
+    content: ""; /* Add content to the pseudo-element */
+    background-color: black; /* Set the background color to black */
+    width: 250px; /* Set the width of the pseudo-element to 250px */
+    height: 250px; /* Set the height of the pseudo-element to 250px */
+    border-radius: 125px; /* Apply a border-radius of 125px for a circular shape */
+    position: absolute; /* Set the position to absolute for precise placement */
+    bottom: -80px; /* Position the pseudo-element 80px above the bottom */
+    right: -80px; /* Position the pseudo-element 80px to the right */
+    animation: transfer 1s; /* Apply the transfer animation over 1s */
+}
+
+/* Styles for the pseudo-element ::after */
+.left-div::after {
+    display: block; /* Render the pseudo-element as a block-level element */
+    content: ""; /* Add content to the pseudo-element */
+    background-color: white; /* Set the background color to white */
+    opacity: 25%; /* Set the opacity to 25% */
+    width: 125px; /* Set the width of the pseudo-element to 125px */
+    height: 125px; /* Set the height of the pseudo-element to 125px */
+    border-radius: 75px; /* Apply a border-radius of 75px for a circular shape */
+    position: absolute; /* Set the position to absolute for precise placement */
+    bottom: 70px; /* Position the pseudo-element 70px above the bottom */
+    right: 70px; /* Position the pseudo-element 70px to the right */
+    transition: 1s; /* Apply a smooth transition effect over 1s */
+    animation: maxmize 2s; /* Apply the maximize animation over 2s */
+}
+
+/* Keyframes for the maximize animation */
+@keyframes maxmize {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    100% {
+        width: 125px;
+    }
+}
+
+/* Keyframes for the transfer animation */
+@keyframes transfer {
+    0% {
+        bottom: -400px;
+    }
+    100% {
+        bottom: -80px;
+    }
+}
+
+/* Styles for the icon within the left-div */
+.left-div i {
+    color: white; /* Set the color of the icon to white */
+    margin-right: 20px; /* Add a right margin to the icon */
+    margin-top: 3px; /* Add a top margin to the icon */
+}
+
+
+/* ----------------------------------------- Contact Us Page End ----------------------------------------- */
+
