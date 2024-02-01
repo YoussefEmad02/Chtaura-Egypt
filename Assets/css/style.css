@@ -226,7 +226,7 @@ a {
 }
 
 /* Styles for the video element */
-video {
+.mainphoto {
     position: absolute; /* Position the video absolutely within its containing block */
     top: 50%; /* Align the top edge of the video to the vertical center of the container */
     left: 50%; /* Align the left edge of the video to the horizontal center of the container */
@@ -243,7 +243,7 @@ video {
 /* Styles for the main header */
 .mainheader {
     font-size: 160px; /* Set the font size of the main header to 160 pixels */
-    color: black; /* Set the text color of the main header to black */
+    color: blue; /* Set the text color of the main header to black */
     font-weight: 600; /* Apply a font weight of 600 (semi-bold) to the main header */
     transition: 0.5s; /* Apply a smooth transition effect over 0.5 seconds */
 }
@@ -256,6 +256,7 @@ video {
 
 /* Styles for the explore button */
 .explorebtn {
+    color:blue;
     font-size: 3rem; /* Set the font size of the explore button to 3rem */
     border: 4px solid; /* Add a 4px solid border to the explore button */
     padding: 20px; /* Add 20px padding to the explore button */
@@ -341,7 +342,7 @@ video {
 
 /* Styles for carousel captions */
 .carousel-caption {
-    bottom: 220px; /* Set the distance from the bottom of the carousel item for the caption */
+    bottom: 180px; /* Set the distance from the bottom of the carousel item for the caption */
     z-index: 2; /* Set the stacking order of the caption above other elements */
 }
 
@@ -369,6 +370,10 @@ video {
     left: 0; /* Align the left edge of the overlay to the left of its container */
     background: rgba(0, 0, 0, 0.7); /* Set the background color of the overlay with some transparency */
     z-index: 1; /* Set the stacking order of the overlay behind the carousel content */
+}
+
+.carousel-control-next, .carousel-control-prev{
+    top: 120px;
 }
 
 /* Styles for 100% width */
