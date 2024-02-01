@@ -53,6 +53,34 @@ if (carousel)
 
 // ---------------------------- Home Page Carousel End ----------------------------
 
+// ---------------------------- Event Section ----------------------------
+
+var conuntDownDate = new Date("Feb 27, 2024 00:00:00").getTime();
+var x = setInterval(function () {
+   var now = new Date().getTime();
+   var distance = conuntDownDate - now;
+
+   if (distance < 0) {
+      clearInterval(x); // Stop the interval when the countdown reaches the date
+      document.getElementById("event").style.display = "none"; // Hide the section with id "event"
+  } else {
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+  }
+
+   if(distance < 0 ){
+
+   }
+},1000)
+
+// ---------------------------- Event Section End ----------------------------
 
 
 // ---------------------------- My Account Page ----------------------------
@@ -287,7 +315,7 @@ function updatetotal() {
       var quantityElement = cartBox.getElementsByClassName("cart-quantity")[0];
 
       // Extract the price and quantity values, and calculate the subtotal for each item
-      var price = parseFloat(priceElement.innerText.replace("$", ""));
+      var price = parseFloat(priceElement.innerText.replace("LE", ""));
       var quantity = quantityElement.value;
       total = total + (price * quantity);
 
@@ -299,7 +327,7 @@ function updatetotal() {
    total = Math.round(total * 100) / 100;
 
    // Update the total price and total items display in the HTML
-   document.getElementsByClassName("total-price")[0].innerText = "$" + total;
+   document.getElementsByClassName("total-price")[0].innerText = total + " LE";
    document.getElementById("total-items-display").innerText = "" + totalItems;
 }
 
