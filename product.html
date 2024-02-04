@@ -7,7 +7,7 @@
   <meta name="keywords" content="x, y, ,etc" />
   <meta name="description" content="x, y, ,etc" />
   <meta name="author" content="x, y, ,etc" />
-  <title>The North Face</title>
+  <title>Chtaura</title>
   <link rel="icon" href="Assets/images/Logo.png" class="icon" />
   <link rel="stylesheet" href="Assets/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="Assets/css/style.css" />
@@ -29,24 +29,24 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link fw-bold fs-3" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="dairy.html">Dairy</a>
+            <a class="nav-link fw-bold fs-3" href="dairy.html">Dairy</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pastries.html">Pastries</a>
+            <a class="nav-link fw-bold fs-3" href="pastries.html">Pastries</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="aboutus.html">About Us</a>
+            <a class="nav-link fw-bold fs-3" href="aboutus.html">About Us</a>
           </li>
         </ul>
-        <li class="nav-item">
+        <li class="nav-item ">
           <button class="btn btn-outline-primary m-2">
-            <a class="nav-link" href="myaccount.html">My Account</a>
+            <a class="nav-link fs-4 fw-bold" href="myaccount.html">My Account</a>
           </button>
         </li>
-        <li class="shoppingicon nav-item">
+        <li class="shoppingicon nav-item text-primary">
           <i class="bx bx bx-shopping-bag fs-3" id="cart-bag"></i>
           <span id="total-items-display" class="cart-number fs-3">0</span>
         </li>
@@ -55,8 +55,11 @@
           <div class="cart-content"></div>
           <div class="total">
             <div class="total-title">Total</div>
-            <div class="total-price">0$</div>
+            <div class="total-price">0 LE</div>
           </div>
+          <button type="button" class="btn btn-warning">
+            <a href="mycart.html" class="btn">Show Cart</a>
+          </button>
           <button type="button" class="btn btn-buy btn-primary">
             <a href="checkout.html" class="btn">Buy Now</a>
           </button>
@@ -73,8 +76,10 @@
           <img src="Assets/images/Pastries/Lebanese Kibbeh.jpg" alt="" class="product-image" />
           <br>
           <div class="row">
-            <img class="thumbnail col-6" src="Assets/images/Pastries/Lebanese Kibbeh.jpg" alt="Thumbnail 1" onclick="changeImage('image1.jpg')">
-            <img class="thumbnail col-6" src="Assets/images/Pastries/Lebanese Kibbeh.jpg" alt="Thumbnail 1" onclick="changeImage('image1.jpg')">
+            <img class="thumbnail col-6" src="Assets/images/Pastries/Lebanese Kibbeh.jpg" alt="Thumbnail 1"
+              onclick="changeImage('image1.jpg')">
+            <img class="thumbnail col-6" src="Assets/images/Pastries/Lebanese Kibbeh.jpg" alt="Thumbnail 1"
+              onclick="changeImage('image1.jpg')">
           </div>
         </div>
         <div class="col-lg-8">
@@ -96,11 +101,10 @@
             <li>Fry directly without defrosting.</li>
           </ol>
           <h3>Price <span class="price text-danger"><s class="text-secondary">430</s> 330 LE</span></h3>
+          <button class="btn btn-warning btn-lg" >Add to Cart</button>
           <a href="checkout.html"><button class="btn btn-primary btn-lg">Buy Now</button></a>
+
         </div>
-        <button class="btn btn-primary add-cart fw-bold" style="position: relative">
-          Add to Cart
-        </button>
       </div>
     </div>
   </section>
@@ -115,30 +119,30 @@
           <a href="product.html">
             <img src="Assets/images/Pastries/Lebanese Kibbeh.jpg" alt="" class="product-image" />
           </a>
-          <h2 class="product-title">Lebanese Kibbeeh</h2>
-          <span class="price">250$</span>
+          <h2 class="product-title">Lebanese <br> Kibbeeh</h2>
+          <span class="price">250 LE</span>
           <i class="bx bx-shopping-bag add-cart"></i>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 productbox p-0">
           <a href="product.html">
             <img src="Assets/images/Pastries/Lebanese Nakanek.jpg" alt="" class="product-image" />
           </a>
-          <h2 class="product-title">Lebanese Nakanek</h2>
-          <span class="price">250$</span>
+          <h2 class="product-title">Lebanese <br> Nakanek</h2>
+          <span class="price">250 LE</span>
           <i class="bx bx-shopping-bag add-cart"></i>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 productbox p-0">
           <a href="product.html">
             <img src="Assets/images/Pastries/Oriental Sojok.jpg" alt="" class="product-image" /></a>
-          <h2 class="product-title">Oriental Sojok</h2>
-          <span class="price">250$</span>
+          <h2 class="product-title">Oriental <br> Sojok</h2>
+          <span class="price">250 LE</span>
           <i class="bx bx-shopping-bag add-cart"></i>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 productbox p-0">
           <a href="product.html">
             <img src="Assets/images/Pastries/Rice Mombar.jpg" alt="" class="product-image" /></a>
-          <h2 class="product-title">Rice Mombar</h2>
-          <span class="price">250$</span>
+          <h2 class="product-title">Rice <br> Mombar</h2>
+          <span class="price">250 LE</span>
           <i class="bx bx-shopping-bag add-cart"></i>
         </div>
       </div>

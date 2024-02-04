@@ -333,7 +333,41 @@ function updatetotal() {
 
 // ----------------------------------- Cart End -----------------------------------
 
+// ----------------------------------- My Cart Page -----------------------------------
+function removeMyCartItem(element) {
+   // Get the closest <tr> parent and remove it
+   var row = element.closest('tr');
+   row.remove();
 
+   // Recalculate the total
+   calculateTotal();
+}
+
+function calculateTotal() {
+   var total = 0;
+   var table = document.getElementById('cartTable');
+   var rows = table.getElementsByTagName('tr');
+
+   for (var i = 1; i < rows.length - 1; i++) { // Exclude header and total row
+       var quantity = parseFloat(rows[i].querySelector('.cart-quantity').value);
+       var price = parseFloat(rows[i].querySelector('.col-md-2').textContent);
+
+       total += quantity * price;
+   }
+
+   // Update the total in the last row
+   var totalRow = rows[rows.length - 1];
+   totalRow.querySelector('span').textContent = Math.floor (total) + ' LE';
+}
+
+// Attach event listener to all quantity inputs
+var quantityInputs = document.querySelectorAll('.cart-quantity');
+quantityInputs.forEach(function (input) {
+   input.addEventListener('input', function () {
+       calculateTotal();
+   });
+});
+// ----------------------------------- My Cart Page End -----------------------------------
 
 // ------------------------ CheckOut Form Validation ------------------------
 
