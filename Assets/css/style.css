@@ -419,7 +419,32 @@ footer {
     margin-bottom: 5%; /* Provide a bottom margin of 5% to create space below headings */
 }
 
-
+.filter-list {
+    list-style: none;
+    padding: 0;
+  }
+  .filter-item {
+    margin-bottom: 10px;
+  }
+  .filter-item label {
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+  .categories-card {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 50px; /* Adjust top position as needed */
+    left: 20px; /* Adjust left position as needed */
+    width: 250px; /* Adjust width as needed */
+  }
+  .categories-card .card-body {
+    padding: 20px;
+  }
+  .main-content {
+    margin-left: 280px; /* Adjust left margin to accommodate the categories card */
+  }
 
 /* --------------------------------------- Products Pages End --------------------------------------- */
 
