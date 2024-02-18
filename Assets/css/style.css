@@ -227,15 +227,13 @@ a {
 
 /* Styles for the video element */
 .mainphoto {
-    position: absolute; /* Position the video absolutely within its containing block */
-    top: 50%; /* Align the top edge of the video to the vertical center of the container */
-    left: 50%; /* Align the left edge of the video to the horizontal center of the container */
-    transform: translate(-50%, -50%); /* Center the video precisely using a translation */
-    min-width: 100%; /* Ensure the minimum width of the video is 100% of its container */
-    min-height: 100%; /* Ensure the minimum height of the video is 100% of its container */
-    width: auto; /* Allow the width of the video to adjust based on its aspect ratio */
-    height: auto; /* Allow the height of the video to adjust based on its aspect ratio */
-    z-index: -1; /* Set a z-index of -1 to position the video behind other elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Set the width to fill its container */
+    height: 100%; /* Set the height to fill its container */
+    object-fit: cover; /* Maintain aspect ratio while covering entire container */
+    z-index: -1;
 }
 
 /* -------------------- Content Over Video Style -------------------- */
