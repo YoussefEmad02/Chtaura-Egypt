@@ -55,7 +55,7 @@ if (carousel)
 
 // ---------------------------- Event Section ----------------------------
 
-var conuntDownDate = new Date("Feb 27, 2024 00:00:00").getTime();
+var conuntDownDate = new Date("Mar 27, 2024 00:00:00").getTime();
 var x = setInterval(function () {
    var now = new Date().getTime();
    var distance = conuntDownDate - now;

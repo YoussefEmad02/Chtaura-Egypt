@@ -219,10 +219,11 @@ a {
 /* ------------------------------- Background Video Style ------------------------------- */
 
 /* Styles for the video container */
-.video-container {
+.photo-container {
     position: relative; /* Establish relative positioning for child elements */
     overflow: hidden; /* Hide any content that overflows the container */
     height: 100vh; /* Set the height of the container to 100% of the viewport height */
+    background-image: url(/Assets/images/3.jpg);
 }
 
 /* Styles for the video element */
@@ -230,9 +231,6 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Set the width to fill its container */
-    height: 100%; /* Set the height to fill its container */
-    object-fit: cover; /* Maintain aspect ratio while covering entire container */
     z-index: -1;
 }
 
