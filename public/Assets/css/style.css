@@ -468,7 +468,7 @@ a {
     }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1366px){
+@media screen and (min-width: 1024px) and (max-width: 1024px){
     .carouselmob{
         height: 30vh;
     }
