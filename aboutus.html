@@ -18,16 +18,22 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-xxl navbar-light bg-light fs-5 fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fs-5 fixed-top" style="height: 126px;">
+   
+      <div class="container justify-content-end">
+        <a class="navbar-brand navmob" href="index.html">
           <img class="logo-img img-fluid" src="Assets/images/Logo.png" alt="Chtaura Logo" />
         </a>
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <li class="shoppingicon nav-item text-primary" style="">
+          <i class="bx bx bx-shopping-bag fs-3" id="cart-bag"></i>
+          <span id="total-items-display" class="cart-number fs-3">0</span>
+        </li>
+        <div class="collapse navexpand navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link fw-bold fs-3" aria-current="page" href="index.html">Home</a>
@@ -47,25 +53,22 @@
               <a class="nav-link fs-4 fw-bold" href="myaccount.html">My Account</a>
             </button>
           </li>
-          <li class="shoppingicon nav-item text-primary">
-            <i class="bx bx bx-shopping-bag fs-3" id="cart-bag"></i>
-            <span id="total-items-display" class="cart-number fs-3">0</span>
-          </li>
-          <div class="cart">
-            <h2 class="cart-title">Your Cart</h2>
-            <div class="cart-content"></div>
-            <div class="total">
-              <div class="total-title">Total</div>
-              <div class="total-price">0 LE</div>
-            </div>
-            <button type="button" class="btn btn-warning">
-              <a href="mycart.html" class="btn">Show Cart</a>
-            </button>
-            <button type="button" class="btn btn-buy btn-primary">
-              <a href="checkout.html" class="btn">Buy Now</a>
-            </button>
-            <i class="bx bx-x" id="close-cart"></i>
+        </div>
+        
+        <div class="cart">
+          <h2 class="cart-title">Your Cart</h2>
+          <div class="cart-content"></div>
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">0 LE</div>
           </div>
+          <button type="button" class="btn btn-warning">
+            <a href="mycart.html" class="btn">Show Cart</a>
+          </button>
+          <button type="button" class="btn btn-buy btn-primary">
+            <a href="checkout.html" class="btn">Buy Now</a>
+          </button>
+          <i class="bx bx-x" id="close-cart"></i>
         </div>
       </div>
     </nav>

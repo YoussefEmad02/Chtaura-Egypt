@@ -17,19 +17,25 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-xxl navbar-light bg-light fs-5 fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fs-5 fixed-top" style="height: 126px;">
+   
+    <div class="container justify-content-end">
+      <a class="navbar-brand navmob" href="index.html">
         <img class="logo-img img-fluid" src="Assets/images/Logo.png" alt="Chtaura Logo" />
       </a>
+      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <li class="shoppingicon nav-item text-primary" style="">
+        <i class="bx bx bx-shopping-bag fs-3" id="cart-bag"></i>
+        <span id="total-items-display" class="cart-number fs-3">0</span>
+      </li>
+      <div class="collapse navexpand navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active fw-bold fs-3" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link fw-bold fs-3" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link fw-bold fs-3" href="dairy.html">Dairy</a>
@@ -38,7 +44,7 @@
             <a class="nav-link fw-bold fs-3" href="pastries.html">Pastries</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-bold fs-3" href="aboutus.html">About Us</a>
+            <a class="nav-link fw-bold fs-3 active" href="aboutus.html">About Us</a>
           </li>
         </ul>
         <li class="nav-item ">
@@ -46,31 +52,49 @@
             <a class="nav-link fs-4 fw-bold" href="myaccount.html">My Account</a>
           </button>
         </li>
-        <li class="shoppingicon nav-item text-primary">
-          <i class="bx bx bx-shopping-bag fs-3" id="cart-bag"></i>
-          <span id="total-items-display" class="cart-number fs-3">0</span>
-        </li>
-        <div class="cart">
-          <h2 class="cart-title">Your Cart</h2>
-          <div class="cart-content"></div>
-          <div class="total">
-            <div class="total-title">Total</div>
-            <div class="total-price">0 LE</div>
+      </div>
+      
+      <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+        <div class="cart-content">
+          <div class="cart-box">
+            <img src="./Assets/images/Pastries/Lebanese%20Kibbeh.jpg" alt="" class="cart-img">
+            <div class="detail-box">
+               <div class="cart-product-title">LEBANESE KIBBEEH</div>
+               <div class="cart-price">250 LE</div>
+               <input type="number" value="1" class="cart-quantity">
+            </div>
+            <i class="bx bxs-trash cart-remove"></i> 
           </div>
-          <button type="button" class="btn btn-warning">
-            <a href="mycart.html" class="btn">Show Cart</a>
-          </button>
-          <button type="button" class="btn btn-buy btn-primary">
-            <a href="checkout.html" class="btn">Buy Now</a>
-          </button>
-          <i class="bx bx-x" id="close-cart"></i>
+          <div class="cart-box">
+            <img src="./Assets/images/Pastries/Lebanese%20Kibbeh.jpg" alt="" class="cart-img">
+            <div class="detail-box">
+               <div class="cart-product-title">LEBANESE KIBBEEH</div>
+               <div class="cart-price">250 LE</div>
+               <input type="number" value="1" class="cart-quantity">
+            </div>
+            <i class="bx bxs-trash cart-remove"></i> 
+          </div>
         </div>
+        <div class="total">
+          <div class="total-title">Total</div>
+          <div class="total-price">0 LE</div>
+        </div>
+        <button type="button" class="btn btn-warning">
+          <a href="mycart.html" class="btn">Show Cart</a>
+        </button>
+        <button type="button" class="btn btn-buy btn-primary">
+          <a href="checkout.html" class="btn">Buy Now</a>
+        </button>
+        <i class="bx bx-x" id="close-cart"></i>
       </div>
     </div>
   </nav>
+  
+
 
   <!-- Carousel -->
-  <div class="container-fluid">
+  <div class="container-fluid carouselmob mobcontainer">
     <div id="carouselCaptions" class="carousel slide">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active"
@@ -80,8 +104,8 @@
       </div>
       <div id="carouselAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="Assets/images/Carousel/1.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-item carouselmob active">
+            <img src="Assets/images/Carousel/1.jpg" class="d-block w-100 carouselmob" alt="..." />
             <div class="carousel-caption">
               <h5>Dairy</h5>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
@@ -90,8 +114,8 @@
               </p>
             </div>
           </div>
-          <div class="carousel-item">
-            <img src="Assets/images/Carousel/2.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-item carouselmob">
+            <img src="Assets/images/Carousel/2.jpg" class="d-block w-100 carouselmob" alt="..." />
             <div class="carousel-caption">
               <h5>Pastries</h5>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
@@ -100,8 +124,8 @@
               </p>
             </div>
           </div>
-          <div class="carousel-item">
-            <img src="Assets/images/Carousel/3.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-item carouselmob">
+            <img src="Assets/images/Carousel/3.jpg" class="d-block w-100 carouselmob" alt="..." />
             <div class="carousel-caption">
               <h5>Lorem ipsum dolor</h5>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
