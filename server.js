@@ -50,7 +50,7 @@ app.get('/product', (req, res) => {
     res.render('product', { title: 'Media' });
 });
 
-let port=3000;
+let port=4000;
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
   });
